@@ -38,7 +38,7 @@ Most of the magic happens in CMakeLists.txt.  The sdcc_compat folder contains th
   5. Ignore the warnings that are internal to the SDK/BSP.  Blame Nuvoton...
   6. Ignore "Unable to resolve configuration with compilerPath"...  This is because VSCode doesn't fully support SDCC.  See https://github.com/microsoft/vscode-cpptools/issues/7146#issue-828247985 .
   7. You should now have a .bin and .ihx file in the build folder.
-     - Protip! Check out the .map file if you're curious about the memory layout.
+     - Protip! Check out the .map and .mem files if you're curious about the memory layout.  8051s are quite different from ARMs.
   8. You can flash the .bin file directly in VSCode by running "CMake: Install".
 
 Good luck!
