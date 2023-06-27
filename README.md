@@ -31,12 +31,12 @@ Most of the magic happens in CMakeLists.txt.  The sdcc_compat folder contains th
 - If using CLion, you can open the project directly.  I've included a custom compiler definition for SDCC, so you should be able to build and run the project right away.
 
 - If using VSCode:
-  1. you'll need to install the CMake Tools extension.
+  1. You'll need to install the CMake Tools and C/C++ extension.
   2. Open the project folder in VSCode.
   3. If it asks for a kit, select "Unspecified".
-  4. Open the command palette (Ctrl+Shift+P) and run the "CMake: Configure" command.
-  5. Open the command palette again and run the "CMake: Build" command.
-  6. Ignore the warnings that are internal to the SDK/BSP.  Blame Nuvoton...
+  4. Open the command palette (Ctrl+Shift+P) and run the "CMake: Build" command.
+  5. Ignore the warnings that are internal to the SDK/BSP.  Blame Nuvoton...
+  6. Ignore "Unable to resolve configuration with compilerPath"...  This is because VSCode doesn't fully support SDCC.  See https://github.com/microsoft/vscode-cpptools/issues/7146#issue-828247985 .
   7. You should now have a .bin and .ihx file in the build folder.
      - Protip! Check out the .map file if you're curious about the memory layout.
   8. You can flash the .bin file directly in VSCode by running "CMake: Install".
