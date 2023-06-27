@@ -1,0 +1,8 @@
+[
+    {
+        "name": "SDCC",
+        "compilers": {
+            "C": "C:\\Program Files\\SDCC\\bin\\sdcc.exe"
+        }
+    }
+]

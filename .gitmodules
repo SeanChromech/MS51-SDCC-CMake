@@ -1,0 +1,3 @@
+[submodule "MS51BSP_KEIL"]
+	path = MS51BSP_KEIL
+	url = https://github.com/OpenNuvoton/MS51BSP_KEIL
