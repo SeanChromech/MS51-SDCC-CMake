@@ -24,10 +24,8 @@ Most of the magic happens in CMakeLists.txt.  The sdcc_compat folder contains th
 
 ## Getting Started
 1. Install SDCC, ideally under C:/Program Files/SDCC.
-2. Clone this repo.
-3. Sync the official SDK/BSP as a submodule.
-   1. In a terminal, cd to the root of this repo.
-   2. `git submodule update --init`
+2. Clone this repo with `git clone --recurse-submodules https://github.com/SeanChromech/MS51-SDCC-CMake`
+3. The above command should automatically download the SDK/BSP to the correct folder.
 
 ## Building
 - If using CLion, you can open the project directly.  I've included a custom compiler definition for SDCC, so you should be able to build and run the project right away.
