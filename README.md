@@ -23,7 +23,7 @@ Other attempts I've seen at getting the SDK/BSP working on SDCC have involved mo
 Most of the magic happens in CMakeLists.txt.  The sdcc_compat folder contains the shim files that make the SDK/BSP work with SDCC.
 
 ## Getting Started
-1. Install SDCC, ideally under C:/Program Files/SDCC.
+1. Install SDCC, ideally under C:/Program Files/SDCC.  You should also have CMake installed.
 2. Clone this repo with `git clone --recurse-submodules https://github.com/SeanChromech/MS51-SDCC-CMake`
 3. The above command should automatically download the SDK/BSP to the correct folder.
 
@@ -33,12 +33,12 @@ Most of the magic happens in CMakeLists.txt.  The sdcc_compat folder contains th
 - If using VSCode:
   1. You'll need to install the CMake Tools and C/C++ extension.
   2. Open the project folder in VSCode.
-  3. If it asks for a kit, select "Unspecified".
-  4. Open the command palette (Ctrl+Shift+P) and run the "CMake: Build" command.
+  3. Open the command palette (Ctrl+Shift+P) and run the "CMake: Build" command.
+  4. If it asks for a kit, select "Unspecified".
   5. Ignore the warnings that are internal to the SDK/BSP.  Blame Nuvoton...
   6. Ignore "Unable to resolve configuration with compilerPath"...  This is because VSCode doesn't fully support SDCC.  See https://github.com/microsoft/vscode-cpptools/issues/7146#issue-828247985 .
   7. You should now have a .bin and .ihx file in the build folder.
      - Protip! Check out the .map and .mem files if you're curious about the memory layout.  8051s are quite different from ARMs.
-  8. You can flash the .bin file directly in VSCode by running "CMake: Install".
+  8. You can flash the .bin file directly in VSCode by running "CMake: Install".  You must have the NuLink Command Tool installed in the location matching the FlashDevice.txt script.
 
 Good luck!
